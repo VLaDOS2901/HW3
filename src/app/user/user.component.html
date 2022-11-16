@@ -1,0 +1,74 @@
+<!-- <p>user works!</p>
+<button (click)="find('vladtymo')">Get User</button>
+<label>{{user.login}}  </label>
+<label>{{user.name}}   </label>
+<label>{{user.email}}</label> -->
+
+<div>
+    <div class="head">
+        <button (click)="find()" class="searchBtn">Search login</button>
+        <input type="text" class="inpLogin" [(ngModel)]="login">
+    </div>
+    <hr>
+
+    <div class="main">
+        <div class="container">
+            <img src={{user.avatar_url}} class="img">
+            <div>
+                <label>Name:</label>
+                <label>{{user.name}}</label>
+            </div>
+            <hr>
+            <div>
+                <label>Login:</label>
+                <label>{{user.login}}</label>
+            </div>
+            <hr>
+          
+        </div>
+
+        <div class="container">
+            <div>
+                <label>Url to github:</label>
+                <label>{{user.html_url}}</label>
+            </div>
+            <hr>
+
+            <div>
+                <label>Blog:</label>
+                <label *ngIf="user.blog == ''">No Blog</label>
+                <label *ngIf="user.blog != ''">{{user.blog}}</label>
+            </div>
+            <hr>
+
+            <div>
+                <label>Country:</label>
+                <label *ngIf="user.location == ''">No City</label>
+                <label *ngIf="user.location != ''">{{user.location}}</label>
+            </div>
+
+            <hr>
+
+            <div>
+                <label>Email:</label>
+                <label *ngIf="user.email == null">No Email</label>
+                <label *ngIf="user.email != null">{{user.email}}</label>
+            </div>
+            <hr>
+
+            <div>
+                <div>
+                    <label>Followers:  </label>
+                    <label>{{user.followers}}</label>
+                </div>
+
+                <div>
+                    <label>Following:  </label>
+                    <label>{{user.following}}</label>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
